@@ -15,6 +15,8 @@ function divide(x, y) {
 }
 
 function operate(operator, x, y) {
+    x = Number(x)
+    y = Number(y)
     switch(operator) {
         case "+":
             return add(x, y);
@@ -23,8 +25,9 @@ function operate(operator, x, y) {
         case "*":
             return multiply(x, y);
         case "/":
+            if (b === 0) return null;
             return divide(x, y);
         default:
-            return "ERROR: Invalid Operator";
+            return null;
     }
 }
